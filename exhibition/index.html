@@ -63,7 +63,7 @@
             <div class="strip-3"></div>
         </div>
     </div>
-
+<button onclick="topFunc()" id="topbtn" title="Go to top">Back To Top</button>
     <a id="top"></a>
 
     <nav class="overlay-nav">
@@ -1728,7 +1728,7 @@
                         <i class="icon social_twitter"></i>
                         <!-- Parameters documentation at https://github.com/fossasia/fossasia-loklak-webtweets/blob/gh-pages/README.md -->
                         <div class="tweets-feed" data-count=3 data-from="fossasia">
-                        </div>
+                        </div><br><br>
                         <span class="text-white">Follow
                             <a target="default" href="https://twitter.com/fossasia">@fossasia</a> for more updates</span>
                         <img class="icon social_rss" src="../img/rss.png" alt="rss">
@@ -1754,28 +1754,25 @@
                         <div class="col-sm-2">
                             <ul class="menu">
                                 <li>
-                                    <a target="_self" href="https://blog.fossasia.org">Blog</a>
+                                    <a target="_self" style="text-decoration: underline" href="https://blog.fossasia.org">Blog</a>
                                 </li>
                                 <li>
-                                    <a target="_self" href="https://github.com/fossasia">Github</a>
+                                    <a target="_self" style="text-decoration: underline" href="https://github.com/fossasia">Github</a>
                                 </li>
                                 <li>
-                                    <a target="_self" href="https://labs.fossasia.org/#projects">Projects</a>
+                                    <a target="_self" style="text-decoration: underline" href="https://labs.fossasia.org/#projects">Projects</a>
                                 </li>
                                 <li>
-                                    <a target="_self" href="https://coc.fossasia.org/">Code of Conduct</a>
+                                    <a target="_self" style="text-decoration: underline" href="https://coc.fossasia.org/">Code of Conduct</a>
                                 </li>
                                 <li>
-                                    <a target="_self" href="https://fossasia.org/about">About</a>
+                                    <a target="_self" style="text-decoration: underline" href="https://fossasia.org/about">About</a>
                                 </li>
                                 <li>
-                                    <a target="_self" href="https://blog.fossasia.org/contact">Contact</a>
+                                    <a target="_self" style="text-decoration: underline" href="https://blog.fossasia.org/contact">Contact</a>
                                 </li>
                                 <li>
-                                    <a target="_self" href="https://fossasia.org/donate/">Donate</a>
-                                </li>
-                                <li>
-                                    <a class="inner-link back-to-top" href="#top">Back To Top</a>
+                                    <a target="_self" style="text-decoration: underline" href="https://fossasia.org/donate/">Donate</a>
                                 </li>
                             </ul>
                         </div>
@@ -1892,6 +1889,27 @@
                 $(this).removeClass('zoom-off');
             });
         </script>
+
+<script>
+
+window.onscroll = function() {scrollFunc()};
+// When the user scrolls down 25px from the top display button
+function scrollFunc() {
+  if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
+    document.getElementById("topbtn").style.display = "block";
+  } else {
+    document.getElementById("topbtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button,go to top of the site
+function topFunc() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
 </body>
 
 </html>
