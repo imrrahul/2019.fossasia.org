@@ -63,7 +63,7 @@
             <div class="strip-3"></div>
         </div>
     </div>
-<button onclick="topFunc()" id="topbtn" title="Go to top">Back To Top</button>
+<button onclick="topFunc()" id="topbtn" title="Go to top">&#10148;</button>
     <a id="top"></a>
 
     <nav class="overlay-nav">
@@ -1754,25 +1754,25 @@
                         <div class="col-sm-2">
                             <ul class="menu">
                                 <li>
-                                    <a target="_self" style="text-decoration: underline" href="https://blog.fossasia.org">Blog</a>
+                                    <a target="_self"  href="https://blog.fossasia.org">Blog</a>
                                 </li>
                                 <li>
-                                    <a target="_self" style="text-decoration: underline" href="https://github.com/fossasia">Github</a>
+                                    <a target="_self"  href="https://github.com/fossasia">Github</a>
                                 </li>
                                 <li>
-                                    <a target="_self" style="text-decoration: underline" href="https://labs.fossasia.org/#projects">Projects</a>
+                                    <a target="_self" href="https://labs.fossasia.org/#projects">Projects</a>
                                 </li>
                                 <li>
-                                    <a target="_self" style="text-decoration: underline" href="https://coc.fossasia.org/">Code of Conduct</a>
+                                    <a target="_self" href="https://coc.fossasia.org/">Code of Conduct</a>
                                 </li>
                                 <li>
-                                    <a target="_self" style="text-decoration: underline" href="https://fossasia.org/about">About</a>
+                                    <a target="_self"  href="https://fossasia.org/about">About</a>
                                 </li>
                                 <li>
-                                    <a target="_self" style="text-decoration: underline" href="https://blog.fossasia.org/contact">Contact</a>
+                                    <a target="_self"  href="https://blog.fossasia.org/contact">Contact</a>
                                 </li>
                                 <li>
-                                    <a target="_self" style="text-decoration: underline" href="https://fossasia.org/donate/">Donate</a>
+                                    <a target="_self"  href="https://fossasia.org/donate/">Donate</a>
                                 </li>
                             </ul>
                         </div>
@@ -1904,8 +1904,8 @@ function scrollFunc() {
 
 // When the user clicks on the button,go to top of the site
 function topFunc() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  
 }
 </script>
 
